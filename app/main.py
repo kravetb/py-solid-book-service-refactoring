@@ -46,15 +46,19 @@ class Print(ABC):
 class ConsolePrint(Print):
 
     def print_book(self, book: Book) -> None:
-        print(f"Printing the book: {book.title}...")
-        print(book.content)
+        print(
+            f"Printing the book: {book.title}..."
+            f"{book.content}"
+        )
 
 
 class ReversePrint(Print):
 
     def print_book(self, book: Book) -> None:
-        print(f"Printing the book in reverse: {book.title}...")
-        print(book.content[::-1])
+        print(
+            f"Printing the book in reverse: {book.title}..."
+            f"{book.content[::-1]}"
+        )
 
 
 class Serializer(ABC):
